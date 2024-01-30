@@ -1,0 +1,11 @@
+:root{
+    margin: 0;
+    padding: 0;
+}
+button{
+    all:unset;
+}
+::placeholder {
+    color: white !important;
+    opacity: 1; /* Firefox */
+  }
