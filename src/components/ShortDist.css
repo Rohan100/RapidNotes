@@ -1,0 +1,31 @@
+.short-dist{
+    margin: 0.6rem;
+    font-size: 1.3rem;
+    border-radius: 0.5em;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+@media (min-width:600px){
+    .short-dist{
+        flex-direction: row;
+    }
+    
+    .short-dist .text-str{
+        width: 50%;
+    }
+    .short-dist .rpimg{
+        width: 40%;
+    }
+}
+.rpimg{
+    border-radius: 1em ;
+    width: 100%;
+    opacity: 0.5;
+}
+.text-str{
+    width: 100%;
+    margin: 0.5em;
+}

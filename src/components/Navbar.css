@@ -1,32 +1,102 @@
-.nvbar{
+.nvbar {
     margin-bottom: 3rem;
 }
 
-.nav_links{
-    font-size: 1.5rem;
+.nav_links {
+    font-size: 1.4rem;
+    font-weight: 700;
     color: white;
 }
-.nav_links div{
-    padding: 1rem;
+
+.nav_links > div {
+    padding: 0.5rem;
+    /* transition: transform 1s cubic-bezier(0.9, 0, 0.3, 0.9); */
 }
-.logo{
+
+.logo {
     width: 200px;
     height: 70px;
     object-fit: contain;
-    object-fit:fill;
+    object-fit: fill;
 }
 
-.ex_button{
-    font-size: 1.9rem;
-    padding: 0 2.5rem;
-    text-decoration: none;
-    border: none;
-    background: black;
-    border-radius: 99px;
-    text-align: center;
-    color: white;
-    vertical-align: middle;
-    font-weight: 600;
-    background-image: linear-gradient(138deg,#215dee   0%,  #B61CFF 100%);
-    margin-bottom: 2rem;
+.search_container {
+    display: grid;
+    place-items: center;
 }
+
+.search {
+    position: relative;
+    box-shadow: 0 4px 24px hsla(222, 68%, 12%, 0.1);
+    overflow: hidden;
+    background-color: white;
+    border-radius: 4rem;
+    width: 66px;
+    height: 66px;
+    transition: width 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
+    padding: 10px !important;
+}
+
+.search_input{
+    width: calc(100% - 56px);
+    height: 100%;
+    border: none;
+    outline: none;
+    opacity: 0;
+    font-size:1.2rem ;
+    
+}
+
+.search_button {
+    position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 10px;
+   width: 46px;
+  height: 46px;
+    right: 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 50%;
+    transition: transform 0.6s cubic-bezier(0.9, 0, 0.3, 0.9);
+}
+
+.search_button .search_icon,
+.search_button .search_close{
+    position: absolute;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: opacity 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
+    
+}
+
+.search_button .search_close{
+    opacity: 0;
+}
+
+.show-search {
+    width: 100%;
+  }
+  .show-search .search_input {
+    opacity: 1 ;
+    pointer-events: initial;
+  }
+  .show-search .search_button {
+    transform: rotate(90deg);
+  }
+  .show-search .search_icon {
+    opacity: 0;
+  }
+  .show-search .search_close {
+    opacity: 1;
+  }
+  
+
+  @media (max-width : 600px){
+    .nvbar > div{
+        justify-content: center;
+    }
+  }

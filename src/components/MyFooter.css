@@ -1,0 +1,67 @@
+.myfooter{
+    background: rgba(0, 0, 0, 0.8);
+    margin: 0;
+    padding: 1rem;
+    grid-template-columns: repeat(1,1fr);
+    font-size: 1.5rem;
+    color: white;
+}
+
+@media (min-width:600px){
+    .myfooter{
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+}
+.lastline{
+    margin-top: 2.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.footer-logo{
+    width: 180px;
+    height: 63px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;  
+    
+}
+
+.address{
+    margin-bottom: 1.6rem;
+    font-size: 1.1rem;
+}
+
+.media-logos{
+    display: flex;
+    justify-content: space-around;
+}
+
+.media-logos .igs{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+}
+
+.igs svg{
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.myfooter .first{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav-wrap{
+    display: grid;
+    font-size: 1.2rem;
+    grid-template-columns: repeat(3,1fr);
+
+}
+.footer-nav-heading{
+    text-align: center;
+}
+.second{
+    flex-grow: 1;
+}

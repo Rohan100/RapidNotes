@@ -17,9 +17,9 @@ function Home() {
         </div>
 
         <div className='button_wrapper d-flex justify-content-around'>
-        <a className='ex_button'>
+        <button className='ex_button'>
           Explore
-        </a>
+        </button>
         </div>
       </Container>
 
