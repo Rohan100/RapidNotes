@@ -1,0 +1,136 @@
+.card-container {
+    padding-left: auto;
+    padding-right: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+    padding-top: 100px;
+}
+
+.Card {
+    /* text-align: center;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px; */
+    height: 550px;
+    margin: 10px;
+    width: 400px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 35px 40px;
+    border-radius: 20px;
+    position: relative;
+    background: black;
+    box-shadow: 0px 0px 40px -8px gray;
+}
+
+.card-container img {
+    position: absolute;
+    top: -60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    /* /* border-color: rgb(27,209,247);; */
+border: 5px solid rgb(144, 159, 162);
+}
+
+
+.user_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 12px 14px;
+}
+.user_details h5 {
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin: 12px 0px;
+    font-weight: 600;
+}
+.user_details span {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: grey;
+    font-size: 12px;
+}
+.user_details p {
+    margin: 12px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+    color: grey;
+}
+.user_details a {
+    text-decoration: none;
+    background: linear-gradient(45deg, #ff00cc, #333399);
+    color: white;
+    padding: 10x 30px;
+    margin: 14px 0;
+    border-radius: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 14px;
+    box-shadow: 0px 6px 22px -6px grey;
+    transition: 0.3s ease-in-out;
+}
+.user_details a:hover {
+    background: transparent;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid darkgrey;
+    background: darkgray;
+    margin-bottom: 20px;
+}
+
+.social-media-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media-icons li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 12px;
+}
+.social-media-icons li a {
+    height: 60px;
+    width: 60px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+.social-media-icons li span {
+    font-size: 15px;
+    color: gray;
+    font-weight: 700;
+}
+
+.Card {
+    transition: all 0.3s ease;
+    /* your other styles */
+  }
+  
+.Card:hover {
+    background-color: black; /* change as needed */
+    transform: translateY(-10px);
+}

@@ -12,9 +12,12 @@
         grid-template-columns: repeat(2,1fr);
         
     }
+    .lastline{
+        text-align: start !important;
+    }
 }
 .lastline{
-    margin-top: 2.5rem;
+    margin-top: 4.5rem;
     font-size: 0.9rem;
     text-align: center;
 }

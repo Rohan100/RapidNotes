@@ -5,6 +5,7 @@ import './App.css'
 import Home from './components/Home'
 import MyFooter from './components/MyFooter'
 import ShortDist from './components/ShortDist'
+import Cards from './components/Cards' 
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <div className='component-container'>
      <Home/>
      <ShortDist/>
+     <Cards/>
      <MyFooter/>
     </div>
   )

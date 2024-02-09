@@ -8,9 +8,9 @@ function ShortDist() {
        <img className='rpimg' src={rpimg} alt="" />
         <div className='text-str'>
         <h1 className="heading text-center">
-            Why we build this ?
+            Why RapidNotes ?
         </h1>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam facilis ad nostrum ut repellat vero explicabo minus facere, enim, nisi beatae consequatur reprehenderit. Nihil necessitatibus accusamus explicabo minus facere, enim, nisi beatae consequatur reprehenderit. Nihil necessitatibus accusamus explicabo minus facere, enim, nisi beatae consequatur reprehenderit. Nihil necessitatibus accusamus  ut atque molestias?
+        Our platform is designed exclusively for students, providing a collaborative space to share and access valuable study resources. Whether you're preparing for exams,simply eager to expand your knowledge, our platform offers a diverse collection of user-generated notes contributed by fellow students. Here, knowledge knows no boundaries as students freely exchange insights, ideas, and study materials across various subjects and disciplines. Join our vibrant community today and empower your academic journey with easy access to a wealth of educational resources!
         </div>
         
     </div>
