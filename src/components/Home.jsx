@@ -1,6 +1,9 @@
 import React from 'react'
 import Nvbar from './Nvbar'
 import './Home.css'
+import ShortDist from './ShortDist'
+import Cards from './Cards'
+import MyFooter from './MyFooter'
 import { Container,Button } from 'react-bootstrap'
 function Home() {
   return (
@@ -21,7 +24,12 @@ function Home() {
           Explore
         </button>
         </div>
+        <ShortDist/>
+      <Cards/>
+      <MyFooter/>
       </Container>
+        
+      
 
     </div>
   )

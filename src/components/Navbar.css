@@ -100,3 +100,9 @@
         justify-content: center;
     }
   }
+
+  .errMsg {
+    color: rgb(248, 186, 29);
+    font-size: 15px;
+    /* text-align: center; */
+  }
