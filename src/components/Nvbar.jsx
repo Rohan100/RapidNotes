@@ -17,10 +17,15 @@ function Nvbar() {
     email: '',
     password: ''
   })
-  const [valuess, setValuess] = useState({
+  const [loginState, setLoginState] = useState({
     email: '',
     password: ''
   })
+  const handleLogin =()=>{
+    signInWithEmailAndPassword(auth, loginState.email, loginState.password).then((res) => {handleClose(); 
+      })
+      .catch((err) => console.log("Error: ", err))
+  }
   const handleSubmission = () => {
     // if(!values.name || !values.email || !values.pass){
     //   setErrorMsg('All fields are required');
@@ -28,9 +33,7 @@ function Nvbar() {
     // }else{
     //   setErrorMsg("");
     // }
-    signInWithEmailAndPassword(auth, valuess.email, valuess.password).then((res) => {handleClose(); 
-    })
-    .catch((err) => console.log("Error: ", err))
+    // 
 
 
     createUserWithEmailAndPassword(auth, values.email, values.password).then((res) => {handleRegistrationClose(); 
@@ -96,9 +99,9 @@ function Nvbar() {
                         type="email"
                         placeholder="Enter your email"
                         className="validate text-white"
-                        value={email}
-                        onChange={(prev)=> 
-                          setValuess((prev) => ({ ...prev, email: event.target.value}))
+                        value={loginState.email}
+                        onChange={(event)=> 
+                          setLoginState((prev) => ({ ...prev, email: event.target.value}))
                         }
                         style={{ backgroundColor: '#17171c' }}
                       />
@@ -110,9 +113,9 @@ function Nvbar() {
                         type="password"
                         placeholder="Enter your password"
                         className="validate text-light "
-                        value={password}
-                        onChange={(prev)=> 
-                          setValuess((prev) => ({ ...prev, password: event.target.value}))
+                        value={loginState.password}
+                        onChange={(event)=> 
+                          setLoginState((prev) => ({ ...prev, password: event.target.value}))
                         }
                         style={{ backgroundColor: '#17171c' }}
                       />
@@ -120,7 +123,7 @@ function Nvbar() {
                   </Form>
                 </Modal.Body>
                 <Modal.Footer className="d-flex justify-content-center " style={{ backgroundColor: '#17171c' }}>
-                  <Button type='submit' className='text-light' variant="default">
+                  <Button onClick={handleLogin} type='submit' className='text-light' variant="default">
                     Login
                   </Button>
                   <button className='text-white' onClick={handleRegistrationShow}>Create Account</button>
