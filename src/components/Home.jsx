@@ -1,10 +1,16 @@
 import React from 'react'
 import Nvbar from './Nvbar'
-import './Home.css'
-import { Container,Button } from 'react-bootstrap'
+import './css/Home.css'
+import { Container } from 'react-bootstrap'
+
+import MyFooter from './MyFooter'
+import ShortDist from './ShortDist'
+import Cards from './Cards' 
+import FeedBack from './FeedBack'
 function Home() {
   return (
-    <div className='home'>
+    <div className='component-container'>
+    <div className='home '>
       <Nvbar />
       <Container>
         <h1 className='short_title text-center'>
@@ -22,7 +28,11 @@ function Home() {
         </button>
         </div>
       </Container>
-
+    </div>
+    <ShortDist/>
+    <Cards/>
+    <FeedBack/>
+    <MyFooter/>
     </div>
   )
 }

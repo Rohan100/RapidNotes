@@ -72,3 +72,7 @@
 .ex_button:focus {
   box-shadow: inset 0 0 0 0.8em black;
 }
+
+.component-container{
+    background: rgba(16,15,21,1);
+}

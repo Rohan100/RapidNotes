@@ -1,21 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-
 import './App.css'
+import React from 'react';
 import Home from './components/Home'
-import MyFooter from './components/MyFooter'
-import ShortDist from './components/ShortDist'
-import Cards from './components/Cards' 
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import UploadFile from './components/UploadFile';
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home/>,
+  },
+  {
+    path: "/upload",
+    element : <UploadFile/>
+  }
+]);
 function App() {
 
   return (
-    <div className='component-container'>
-     <Home/>
-     <ShortDist/>
-     <Cards/>
-     <MyFooter/>
-    </div>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
   )
 }
 

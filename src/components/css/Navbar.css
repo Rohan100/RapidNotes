@@ -31,10 +31,10 @@
     overflow: hidden;
     background-color: white;
     border-radius: 4rem;
-    width: 66px;
-    height: 66px;
+    width: 50px;
+    height: 50px;
     transition: width 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
-    padding: 10px !important;
+    padding:0px 10px !important;
 }
 
 .search_input{
@@ -51,10 +51,9 @@
     position: absolute;
    top: 0;
    bottom: 0;
-   right: 10px;
+   right: 2px;
    width: 46px;
   height: 46px;
-    right: 10px;
     margin: auto;
     display: flex;
     align-items: center;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import "./Navbar.css"
+import "./css/Navbar.css"
 import rplogo from '../assets/RapidNotes-logos_white.png'
-import { Navbar, Container, Nav } from 'react-bootstrap'
+import { Navbar, Container, Nav, Button } from 'react-bootstrap'
 import { FaSearch } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
 function Nvbar() {
@@ -17,15 +17,7 @@ function Nvbar() {
         </Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav" className=' d-flex'>
           <div className='nav_links d-flex ms-auto'>
-
-           
-            <div className='align-self-center'>
-              <button>Upload</button>
-            </div>
-            <div className='align-self-center'>
-              <button>Login</button>
-            </div>
-            <div className='search_container flex-grow-1 ms-auto '>
+          <div className='search_container flex-grow-1 ms-auto '>
               <div className={`${search ? 'search show-search' : 'search'}`}>
                 <input type='search' className='search_input' placeholder='Search ...' ></input>
                 <div onClick={() => setSearch(s => !s)}  className='search_button'>
@@ -35,6 +27,14 @@ function Nvbar() {
               </div>
             
             </div>
+           
+            <div className='align-self-center'>
+              <Button variant="outline-primary">Sign up</Button>
+            </div>
+            <div className='align-self-center'>
+              <Button variant="outline-primary">Sign in</Button>
+            </div>
+            
           </div>
         </Navbar.Collapse>
       </Container>
