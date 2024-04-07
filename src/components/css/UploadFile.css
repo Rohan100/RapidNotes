@@ -10,13 +10,16 @@
 .op-container{
     flex-direction: column;
 }
+.op-container > div{
+    flex:50%
+}
 .file_upload_form{
     position: relative;
     display: flex;
     padding: 1rem;
     flex-direction: column;
     width: 95%;
-    background: #1e2024;;
+    background: #202122;
     color: white;
     border-radius: 1em;
 }

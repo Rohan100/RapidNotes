@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Form } from 'react-bootstrap'
-import "./css/feedBack.css"
+import "../../css/feedBack.css"
 function FeedBack() {
   return (
     <div className='feedback-container'>

@@ -1,18 +1,17 @@
 import React from 'react'
-import Nvbar from './Nvbar'
-import './css/Home.css'
+import '../../css/Home.css'
 import { Container } from 'react-bootstrap'
 
 import MyFooter from './MyFooter'
 import ShortDist from './ShortDist'
 import Cards from './Cards' 
 import FeedBack from './FeedBack'
-function Home() {
+function FrontPage() {
   return (
-    <div className='component-container'>
+    <>
     <div className='home '>
-      <Nvbar />
-      <Container>
+
+      <Container className='mt-5'>
         <h1 className='short_title text-center'>
           Welcome to <span className='imp'>RapidNotes</span> the ultimate hub for <span className='imp'>students </span>
            to <span className='imp'>collaborate </span> and <span className='imp'>excel!</span>
@@ -33,8 +32,8 @@ function Home() {
     <Cards/>
     <FeedBack/>
     <MyFooter/>
-    </div>
+    </>
   )
 }
 
-export default Home
+export default FrontPage

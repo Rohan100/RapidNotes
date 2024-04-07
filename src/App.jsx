@@ -1,11 +1,12 @@
 import './App.css'
 import React from 'react';
-import Home from './components/Home'
+import Home from './components/js/home/Home'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import UploadFile from './components/UploadFile';
+import UploadFile from './components/js/UploadFile';
+
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ function App() {
 
   return (
     <React.StrictMode>
-      <RouterProvider router={router} />
+        <RouterProvider router={router} />
     </React.StrictMode>
   )
 }

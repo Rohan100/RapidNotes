@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import rpimg from '../assets/secondimg.jpg'
-import './css/shortDist.css'
+import rpimg from '../../../assets/secondimg.jpg'
+import '../../css/shortDist.css'
 function ShortDist() {
   return (
     <div className='short-dist'>

@@ -1,21 +1,22 @@
 .nvbar {
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
+    flex-wrap: wrap;
 }
 
+
 .nav_links {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: white;
 }
 
 .nav_links > div {
-    padding: 0.5rem;
+    padding: 0.3rem;
     /* transition: transform 1s cubic-bezier(0.9, 0, 0.3, 0.9); */
 }
 
 .logo {
-    width: 200px;
-    height: 70px;
+    height: 50px;
     object-fit: contain;
     object-fit: fill;
 }
@@ -98,4 +99,11 @@
     .nvbar > div{
         justify-content: center;
     }
+  }
+
+  .sidemenu-icon{
+    font-size: 2rem;
+    color: white;
+    margin: 0 1rem 0 1rem;
+    cursor: pointer;
   }

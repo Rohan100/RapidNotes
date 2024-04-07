@@ -1,7 +1,7 @@
 import React from 'react'
-import rplogo from '../assets/RapidNotes-logos_white.png'
+import rplogo from '../../../assets/RapidNotes-logos_white.png'
 import { Container } from 'react-bootstrap'
-import './css/MyFooter.css'
+import '../../css/MyFooter.css'
 import { FaFacebookF } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa6";

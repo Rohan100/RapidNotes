@@ -1,0 +1,28 @@
+.userpage-container{
+    background-color: rgba(16, 15, 21, 1);
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.user-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter{
+    display: flex;
+    width: 80%;
+}
+@media (min-width: 600px) {
+    .filter {
+      width: 50%;
+    }
+  }
+
+.file-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1rem;
+    justify-content: space-around;
+}

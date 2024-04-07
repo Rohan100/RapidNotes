@@ -1,14 +1,21 @@
-import React, { useState } from 'react'
-import "./css/Navbar.css"
-import rplogo from '../assets/RapidNotes-logos_white.png'
+import React, { useEffect, useState } from 'react'
+import "../../css/Navbar.css"
+import rplogo from '../../../assets/RapidNotes-logos_white.png'
 import { Navbar, Container, Nav, Button } from 'react-bootstrap'
 import { FaSearch } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
+import { MdMenu } from "react-icons/md";
+import Sidebar from '../Navbar/Sidebar';
 function Nvbar() {
   const [search,setSearch] =  useState(false);
+  const [hide,setHide] = useState(true);
+  useEffect(() => {
+    setHide(true)
+  },[])
   return (
+    <>
     <Navbar className='navbar-transparent nvbar'>
-      <Container className='d-flex flex-wrap nav_holder'>
+        <MdMenu className='sidemenu-icon' onClick={() => setHide((s) => !s)}/>
         <Navbar.Brand href="#home" className='flex-fill flex-grow-1' >
           <img
             src={rplogo}
@@ -37,8 +44,9 @@ function Nvbar() {
             
           </div>
         </Navbar.Collapse>
-      </Container>
     </Navbar>
+    <Sidebar hide={hide} setHide={setHide}/>
+    </>
   )
 }
 

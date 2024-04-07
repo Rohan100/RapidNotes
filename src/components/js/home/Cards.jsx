@@ -1,7 +1,7 @@
 import React from 'react'
-import './css/Cards.css';
-import akLogo from '../assets/Ak.jpeg';
-import avatar from '../assets/avatar.png';
+import '../../css/Cards.css';
+import akLogo from '../../../assets/Ak.jpeg';
+import avatar from '../../../assets/avatar.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram,faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
