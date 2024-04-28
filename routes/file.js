@@ -1,13 +1,13 @@
 import {Router} from "express";
 import multer from 'multer';
-import { getFileFromSubject, getFileFromdepartment, getFiles, getMyFiles, updateFile, uploadFile } from "../controller/fileController.js";
+import { getFileFromSubject,getFileFromId, getFileFromdepartment, getFiles, getMyFiles, updateFile, uploadFile } from "../controller/fileController.js";
 
 
 const Filerouter = Router();  
 const upload = multer({ storage: multer.memoryStorage() });
 
 Filerouter.get('/',getFiles);
-
+Filerouter.get('/:id',getFileFromId)
 Filerouter.post('/upload', upload.single('file'),uploadFile)
 
 

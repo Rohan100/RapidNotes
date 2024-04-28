@@ -10,12 +10,49 @@ import { pdf } from 'pdf-to-img'
 
 const storage = getStorage(app)
 const db = getFirestore(app) 
+export const getFileFromId =async (req,res) => {
+    const id = req.params.id
+    const filesnap = await getDoc(doc(db,'files/'+id))
+    let filedata = {}
+    if(filesnap.exists()){
+        const data = filesnap.data()
+        const usersnap =await getDoc(doc(db,'users/'+data.user_id));
 
+            if((usersnap.exists())){
+                filedata = {
+                    ...data,
+                    id : filesnap.id,
+                    user : usersnap.data()
+                }
+            }
+    }
+    res.json(filedata)
+}
 export const getFiles = async(req,res) => {
      const filesnap = await getDocs(collection(db,'files'));
-     const data = [];
-     filesnap.forEach((d) => data.push({...d.data(),id : d.id}))
-     res.json(data);
+     const filedata = [];
+     const data= []
+     try{
+
+         filesnap.forEach( (d) => {
+            const file = d.data()
+            filedata.push({...file,id : d.id})
+            
+        })
+
+         for(const d of filedata){
+            const usersnap =await getDoc(doc(db,'users/'+d.user_id));
+
+            if((usersnap.exists())){
+                data.push({...d,user : usersnap.data()});
+            }
+         }
+    }catch(er){
+        console.log(er)
+    }
+   
+    res.json(data);
+     
 }
 
 export const getFileFromdepartment = async( req,res) => {
