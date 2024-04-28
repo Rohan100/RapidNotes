@@ -2,6 +2,7 @@
     background-color: rgba(16, 15, 21, 1);
     height: 100vh;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .user-container{
@@ -14,15 +15,20 @@
     display: flex;
     width: 80%;
 }
-@media (min-width: 600px) {
-    .filter {
-      width: 50%;
-    }
-  }
+
 
 .file-container{
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto  ;
     gap: 1rem;
     justify-content: space-around;
 }
+
+@media (min-width: 600px) {
+    .filter{
+        width: 50%;
+    }
+     .file-container{
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important  ;  
+     }
+  }

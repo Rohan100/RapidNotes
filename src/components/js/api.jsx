@@ -45,3 +45,12 @@ export const getFiles = async () => {
         throw error
     }
 }
+
+export const getFilesFromId = async (id) => {
+    try{
+        const response = await api.get('/file/' + id);
+        return response.data;
+    }catch(error){
+        throw error
+    }
+}

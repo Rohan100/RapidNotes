@@ -1,26 +1,24 @@
 import React, { useContext, useEffect, useState } from 'react'
-import Nvbar from '../home/Nvbar'
+import Nvbar from '../Navbar/Nvbar'
 import { Form } from 'react-bootstrap'
 
 import "../../css/user/UserPage.css"
 import Notes from './Notes'
-import { getFiles } from '../api'
-import { Link } from 'react-router-dom'
+
+import { Link, useNavigate } from 'react-router-dom'
+import { ViewPdf } from '../ViewPdf'
+import { UserFileContext } from '../../../store/FileContext'
 
 
 function UserPage() {
-  const [files,setFiles] = useState([]);
+  const {files} = UserFileContext();
+  const navigate = useNavigate();
 
-  const fetchFiles = async () => {
-      const data = await getFiles();
-      setFiles(data);
-  } 
-
-  useEffect(()=>{
-    fetchFiles();
-  },[])
-
-
+  console.log(files)
+  const handleSelectFile = (i) => {
+    selectFileToView(i)
+    navigate('/view')
+  }
   return (
     <div className='userpage-container' >
       <Nvbar />
@@ -42,10 +40,11 @@ function UserPage() {
         </div>
         <div className="file-container">
           {files.map(i => 
-           <Link to={`/view/${i.id}`}>
-            <Notes onClick={viewPdf} url={i.thumbnail} name={i.file_name} key={i.id}  ></Notes>
+           <Link to={'/view/'+i.id} key={i.id}  >
+            <Notes url={i.thumbnail} name={i.file_name}  ></Notes>
            </Link> 
           )}
+          
         </div>
     </div>
   )

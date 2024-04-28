@@ -6,23 +6,33 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import UploadFile from './components/js/UploadFile';
+import { AuthContextProvider } from './store/AuthContext.jsx';
+import { FileContextProvider } from './store/FileContext.jsx';
+import { ViewPdf } from './components/js/ViewPdf.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home/>,
+    element: <Home />,
   },
   {
     path: "/upload",
-    element : <UploadFile/>
+    element: <UploadFile />
+  },{
+    path : "/view/:id",
+    element : <ViewPdf/>
   }
 ]);
 function App() {
 
   return (
     <React.StrictMode>
-        <RouterProvider router={router} />
+      <AuthContextProvider>
+        <FileContextProvider>
+          <RouterProvider router={router} />
+        </FileContextProvider>
+      </AuthContextProvider>
     </React.StrictMode>
   )
 }

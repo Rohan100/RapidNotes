@@ -1,0 +1,15 @@
+.pdf-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: scroll;
+    background-color: rgb(56, 53, 53);
+}
+.pdf-veiwer{
+    padding: 1.2rem;
+}
+
+.react-pdf__Page{
+    margin-bottom:15px ;
+}

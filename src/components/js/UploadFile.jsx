@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import '../css/UploadFile.css'
 import { Form, Col, Button } from 'react-bootstrap';
 import { getBranches, getSubject, uploadFile } from './api';
+import UserPage from './user/UserPage';
+import { UserAuth } from '../../store/AuthContext';
 
 function UploadFile() {
   const formdata = new FormData();
@@ -13,6 +15,7 @@ function UploadFile() {
   const [sub,setSub] = useState();
   const [description,setDescription] = useState();
   const [file,setFile] = useState('');
+  const {user} = UserAuth();
 
   useEffect(() => {
     const fetchBr = async () =>{
@@ -41,7 +44,7 @@ function UploadFile() {
   const submitFile = async (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('userid','rohan405')
+    formData.append('userid',user.uid)
     formData.append('file',file);
     formData.append('department',branch);
     formData.append('subject',sub);

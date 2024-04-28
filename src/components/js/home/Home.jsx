@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from 'react'
-import Nvbar from './Nvbar'
+import Nvbar from '../Navbar/Nvbar.jsx'
 import '../../css/Home.css'
 import FrontPage from './FrontPage'
 import UserPage from '../user/UserPage';
+import { UserAuth } from '../../../store/AuthContext.jsx';
 function Home() {
-  const [user, setUser] = useState(true);
-  useEffect(() => {
-    setUser(false);
-  },[])
+  const {user} = UserAuth();
+
   return (
     <div className='component-container'>
-      {user ?
-        <>
+      {!user ?
+          <>
           <Nvbar />
           <FrontPage />
-        </> : <UserPage />
+          </>
+          : 
+          <UserPage />
         }
 
     </div>

@@ -78,8 +78,8 @@
 }
 
 .show-search {
-    width: 100%;
-  }
+  width: 100%;
+}
   .show-search .search_input {
     opacity: 1 ;
     pointer-events: initial;
@@ -107,3 +107,116 @@
     margin: 0 1rem 0 1rem;
     cursor: pointer;
   }
+
+
+  .modal-content {
+    background-color: rgb(33 37 41)  !important;
+  }
+
+  .modal-content {
+    width: 80% ;
+    margin: 0 auto !important;
+  }
+  .modal-body {
+    padding: 0;
+  }
+  .btn-close {
+    position: absolute;
+    right: 0;
+    padding: 1em;
+  }
+  h1 {
+    font-size: 2.3em;
+    font-weight: bold;
+  }
+  .myform {
+    padding: 0.5em 1em;
+    max-width: 100%;
+    color: #fff;
+    /* box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18); */
+  }
+  @media (max-width: 576px) {
+    .myform {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  }
+  .form-control:focus {
+    box-shadow: inset 0 -1px 0 #7e7e7e;
+  }
+  .form-control {
+    background-color: inherit;
+    color: #fff;
+    padding-left: 0;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #fff;
+  }
+  .myform .btn {
+    width: 100%;
+    font-weight: 800;
+    border-radius: 0;
+    padding: 0.5em 0;
+    background-color: inherit;
+    color: #fff;
+  }
+  .myform .btn:hover {
+    background-color: #fff;
+    color: black;
+    border-color: #fff;
+  }
+  p {
+    text-align: center;
+    padding-top: 2em;
+    color: grey;
+  }
+  p a {
+    color: #e1e1e1;
+    text-decoration: none;
+  }
+  p a:hover {
+    color: #fff;
+  }
+
+  .divider{
+    padding: 0 5px 0 5px;
+    background-color: rgb(33 37 41);
+  }
+  .divider-con{
+    width: 80%;
+    text-align: center;
+    border-bottom: 1px solid #979faf;
+    line-height: 0.1em;
+    margin-left: 10%;
+  }
+  .google-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+  }
+
+  .error-span{
+    color: red;
+    opacity: 0.9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+.profile-pic img{
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+.dropdown-menu{
+  right: 0;
+  left: auto !important;
+}
+.dropdown-toggle::after{
+  content: none !important;
+}
+.dropdown-toggle{
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
